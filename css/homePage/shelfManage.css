@@ -1,0 +1,157 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/* html,.topContainer{
+	background-color: #ececec;
+} */
+
+.head-name-style{
+	position: absolute;
+	top:4%;
+	left: 45%;
+	font-weight: bold;
+	font-size: 2rem;
+	color: #00C9FF;
+}
+
+.add-bookstore{
+	width: 2.875rem;
+	height: auto;
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	cursor: pointer;
+}
+
+.group-list{
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	margin-top: 0rem ;
+	margin-left: 2.65rem;
+	margin-right: 9.375rem;
+	margin-bottom: 15.75rem;
+	text-align: center;
+}
+
+.group-list img{
+	/* width: 9.625rem;
+	height: 10rem; */
+	position: relative;
+	top: 0.3rem;
+}
+
+.store-name{
+	text-align: left;
+}
+
+ul li{
+	width: 32.25rem;
+	height: 26rem;
+	list-style-type: none;
+	box-shadow: 0.0625rem 0.3125rem 0.625rem 0rem #BBBBBB;
+	border-radius: 0.3125rem;
+	margin-top: 7.75rem;
+	margin-left: 6.75rem;
+	margin-bottom: 0rem;
+}
+
+.storeHead{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #00C9FF;
+	font-weight: bold;
+	font-size: 2rem;
+	color: #FFFFFF;
+	border-radius: 0.3125rem 0.3125rem 0rem 0rem;
+}
+
+.storeHead p{
+	width: 70%;
+	height: auto;
+	padding-top: 0.8125rem;
+}
+
+.editIcon,.deleteIcon{
+	width: 1.6875rem;
+	height: 2rem;
+}
+
+/* ul li>img{
+	width: 16.875rem;
+	height: 14.3125rem;
+	position: relative;
+	top: 2.55rem;
+	left: 4.65rem;
+} */
+
+.bluetxt{
+	font-size: 2rem;
+	font-family: Source Han Sans SC;
+	font-weight: bold;
+	color: #00C9FF;
+}
+
+.shelfManage-img{
+	width: 10.625rem;
+	height: 11.25rem;
+	margin-left: 0.625rem;
+	margin-top: 1.85rem;
+}
+
+.shelfDescribe{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 1.85rem;
+	font-size: 1.25rem;
+	font-family: Source Han Sans SC;
+	font-weight: 400;
+	color: #000000;
+}
+
+.backBox{
+	width: 100%;
+	height: 5rem;
+	margin: auto;
+	text-align: center;
+}
+
+.backBtn{
+	width: 14.0625rem;
+	height: 4.375rem;
+	position: relative;
+	top: 7.75rem;
+	font-size: 2rem;
+	font-weight: bold;
+	color: #FFFFFF;
+	letter-spacing: 0.5rem;
+}
+
+.backBtn:hover,.backBtn:visited,.backBtn:focus{
+	background: #00C9FF;
+	color: #FFFFFF;
+}
+
+.blue-background {
+    color: #fef4e9;
+    border: solid 0px #da7c0c;
+    background: #00C9FF;
+    background: -webkit-gradient(linear, left top, left bottom, from(#16e4ff), to(#00c4ff));
+    background: -moz-linear-gradient(top,  #16e4ff,  #00c4ff);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#16e4ff', endColorstr='#00c4ff');
+}
+
+/* 无分店提示页面 */
+.container{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	padding-right: 12.5rem;
+	position: relative;
+	top: 15rem;
+	display: none;
+}

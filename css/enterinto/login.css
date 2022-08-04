@@ -1,0 +1,140 @@
+* {
+	margin: 0;
+	padding: 0;
+	touch-action: pan-y;
+	font-family: "SourceHanSansSC-Normal";
+}
+
+html {
+	background: #fff;
+}
+
+#bg-container{
+	position:absolute;
+	top: 0;
+	left: 0;
+	width:100%;
+	height:100%;
+	min-width: 1000px;
+	z-index:-10;
+	zoom: 1;
+	background-color: #fff;
+	background: url(../../picture/images/login_bg.png) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-position: center 0;
+}
+
+#user-login-container{
+	opacity: 0.9;
+	width: 75rem;
+	height: 42.625rem;
+	position: absolute;
+	/* margin-top: 12.1875rem;
+	margin-left: 22.5rem; */
+	background: url(../../picture/images/book.png) no-repeat;
+	background-position: center;
+	/* background-size: 75rem 42.625rem; */
+	background-size:cover;
+	display:flex;
+	justify-content: space-between;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);/* 居中 */
+}
+#user-login-container>div{
+	width:50%;
+	position:relative;
+}
+.book_left>div{
+	width:100%;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+/* .book_left{
+	float: left;
+	line-height: 6.25rem;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	top: 35%;
+	left: 20%;
+} */
+
+.book_left p{
+	text-align: center;
+	color: white;
+	font-size: 3rem;
+}
+
+.book_right>div{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 58%;
+	transform: translate(-50%,-50%);
+}
+/* .book_right{
+	float: right;
+	display: inline-block; 
+	vertical-align: middle;
+	position: relative;
+	top: 20%;
+	right: 15%;
+} */
+
+.login_account{
+	width: 27.25rem;
+	height: 3.75rem;
+	background: url(../../picture/images/account.png) no-repeat 0 0;
+	background-position: 0.625rem;
+	padding-left: 2.75rem;
+	/* padding-right: 2.75rem; */
+	font-size: 1.375rem;
+	color: #999999;
+	border: 1px solid #CCCCCC;
+}
+
+.login_pwd{
+	width: 27.25rem;
+	height: 3.75rem;
+	background: url(../../picture/images/lock_pwd.png) no-repeat 0 0;
+	background-position: 0.625rem;
+	padding-left: 2.75rem;
+	font-size: 1.375rem;
+	color: #999999;
+	border: 1px solid #CCCCCC;
+}
+
+#result{
+	color: red;
+	font-size: 1.375rem;
+}
+
+input[type='checkbox']{
+	transform: translate(-20%,27%);
+}
+
+.remember{
+	font-size: 1.125rem;
+	font-weight: 300;
+	color: #666666;
+}
+
+/* #remember_check{
+	font-size: 1.125rem;
+	color: #666666;
+	line-height: 5.5rem;
+} */
+
+.login_btn{
+	width: 30rem;
+	height: 3.75rem;
+	background: #00C9FF;
+	font-size: 1.5rem;
+	color: #FEFEFE;
+	border: none;
+}

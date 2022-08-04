@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>书架管理</title>
+		<link rel="stylesheet" href="../../css/publicStyle/bootstrap.css" />
+		<link rel="stylesheet" href="../../css/publicStyle/bootstrap-theme.css" />
+		<link rel="stylesheet" href="../../css/publicStyle/public.css" />
+		<link rel="stylesheet" href="../../css/homePage/shelfManage.css" />
+	</head>
+	<body>
+		<div class="topContainer">
+			<p class="head-name-style"><span id="headStore">温馨书店</span>-<span id="partStore">房山分店</span></p>
+			<!-- 书店列表 向后台查询总店并动态展示 -->
+			<div class="">
+				<img class="add-bookstore" onclick="" alt="添加总店" title="添加总店" src="../../picture/images/plus-sign.png" />
+				<ul class="group-list">
+					<li>
+						<div class="storeHead">
+							<p class="store-name">书架001</p>
+							<img class="editIcon" src="../../picture/images/edit.png"/>
+							<img class="deleteIcon" src="../../picture/images/delete.png"/>
+						</div>
+						<img class="shelfManage-img" src="../../picture/images/shelfManage.png" />
+						<div class="shelfDescribe">
+							<div>
+								<p>书架层数</p>
+								<p class="bluetxt">5</p>
+							</div>
+							<div>
+								<p>每层格数</p>
+								<p class="bluetxt">1</p>
+							</div>
+							<div>
+								<p>书籍数量</p>
+								<p class="bluetxt">0</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="backBox">
+					<button class="btn backBtn blue-background" onclick="">返回</button>
+				</div>
+			</div>
+			
+			<!-- 无书架信息页面展示 -->
+			<div class="container">
+				<img class="img-createShelf" src="../../picture/images/shelfManage.png" />
+				<!-- <img class="img-add" onclick="addBookstoreFun()" title="添加" alt="添加书店" src="../../picture/images/add.png" /> -->
+				<!-- <p class="text-add">添加书店</p> -->
+				<p id="noBookstoreTip">提示：当前并无分店信息，请先创建分店</p>
+				<div class="backBox">
+					<button class="btn backBtn blue-background" onclick="">返回</button>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" charset="utf-8" src="../../js/publicEvent/jquery.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../../js/publicEvent/bootstrap.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../../js/publicEvent/bootstrap.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../../js/publicEvent/utils.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../../js/homePage/shelfManage.js"></script>
+</html>

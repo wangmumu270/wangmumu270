@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<title>登录页面</title>
+		<link rel="stylesheet" href="../../css/publicStyle/bootstrap.css" />
+		<link rel="stylesheet" href="../../css/publicStyle/bootstrap-theme.css" />
+		<link rel="stylesheet" href="../../css/publicStyle/public.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/enterinto/login.css" />
+	</head>
+	<body>
+		<div class="topContent container-fluid">
+			<!-- 背景区域 -->
+			<div id="bg-container">
+				<!-- 登录内容区域 -->
+				<div id="user-login-container">
+					<div class="book_left">
+						<div>
+							<p>Welcome!</p>
+							<p>图书管理系统</p>
+						</div>
+					</div>
+					<div class="book_right">
+						<div>
+							<input class="login_account" name="account" id="account" value=""  type="text" placeholder="请输入账号"/>
+							<br /><br /><br />
+							<input class="login_pwd" name="password" id="password" value="" type="password" placeholder="请输入密码"/>
+							<br /><br /><div id="result"></div><br />
+							<label class="remember"><input id="remember_check" type="checkbox" checked="checked"/>记住用户名和密码</label>
+							<br /><br /><br />
+							<button class="login_btn" onclick="checkForm()">登录</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<!-- <script type="text/javascript" src="../../js/publicEvent/3.1.1/layer.js"></script> -->
+	<script type="text/javascript" charset="utf-8" src="../../js/publicEvent/jquery.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../../js/publicEvent/bootstrap.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../../js/publicEvent/bootstrap.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../../js/publicEvent/utils.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../../js/enterInto/login.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../../js/publicEvent/public.js"></script>
+</html>

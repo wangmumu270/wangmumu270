@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<title>查看分店</title>
+		<link rel="stylesheet" href="../../css/publicStyle/bootstrap.css" />
+		<link rel="stylesheet" href="../../css/publicStyle/bootstrap-theme.css" />
+		<link rel="stylesheet" href="../../css/publicStyle/public.css" />
+		<link rel="stylesheet" href="../../css/homePage/partBookStore.css" />
+		<!-- <link rel="stylesheet" href="../../css/homePage/createBookstores.css" /> -->
+	</head>
+	<body>
+		<div class="topContainer">
+			<div class="container">
+				<img class="img-createStore" src="../../picture/images/createStore.png" />
+				<!-- <img class="img-add" onclick="addBookstoreFun()" title="添加" alt="添加书店" src="../../picture/images/add.png" /> -->
+				<!-- <p class="text-add">添加书店</p> -->
+				<p id="noBookstoreTip">提示：当前并无分店信息，请先创建分店</p>
+				<div class="backBox">
+					<button class="btn backBtn blue-background" onclick="backBtnFun()">返回</button>
+				</div>
+			</div>
+
+			<!-- 书店列表 向后台查询分店并动态展示 -->
+			<div class="store-list">
+				<img class="add-bookstore" alt="添加分店" title="添加分店" src="../../picture/images/plus-sign.png" />
+				<a class="addClubCardHref" href="addClubCard.html"><img class="vip-setting" alt="会员卡" title="会员卡设置"
+						src="../../picture/images/vipIcon.png" /></a>
+				<ul class="part-group-list">
+					<!-- <li>
+						js渲染若干书店
+					</li> -->
+				</ul>
+				<div class="backBox">
+					<button class="btn backBtn02 blue-background" onclick="backBtnFun()">返回</button>
+				</div>
+			</div>
+			<!-- 添加分店弹框 -->
+			<div class="mask">
+				<div class="modal-dialog">
+					<div class="dialog-head">
+						<p>添加分店</p>
+					</div>
+					<form>
+						<label for="storeName">分店名称</label>
+						<input id="storeName" type="text" />
+						<label for="storeAddress">分店地址</label>
+						<input id="storeAddress" type="text" />
+					</form>
+					<div class="btnBox">
+						<button class="btn cancelBtn" type="button">取消</button>
+						<button class="btn" type="submit" onclick="addPartBookStore()">确定</button>
+					</div>
+				</div>
+			</div>
+			<!-- 修改分店弹框 exitPartBookStore()-->
+			<div class="exit-mask">
+				<div class="modal-dialog">
+					<div class="dialog-head">
+						<p>修改分店</p>
+					</div>
+					<form>
+						<label for="exitStoreName">分店名称</label>
+						<input id="exitStoreName" type="text" />
+						<label for="exitStoreAddress">分店地址</label>
+						<input id="exitStoreAddress" type="text" />
+					</form>
+					<div class="btnBox">
+						<button class="btn cancelBtn" type="button">取消</button>
+						<button class="btn exitPartBookStore" type="submit" onclick="">确定</button>
+					</div>
+				</div>
+			</div>
+			<!-- <iframe id="create-bookstore" name="createBookstore" src="partBookStoreDetail.html" frameborder="0"></iframe> -->
+		</div>
+	</body>
+	<script type="text/javascript" charset="utf-8" src="../../js/publicEvent/jquery.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../../js/publicEvent/bootstrap.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../../js/publicEvent/bootstrap.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../../js/publicEvent/utils.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../../js/homePage/partBookStore.js"></script>
+</html>

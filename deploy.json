@@ -1,0 +1,5 @@
+{
+"urlHead":"http://192.168.2.13:8081",
+"login":"login.html",
+"request":"http://192.168.2.13:8081/WebSocket"
+}

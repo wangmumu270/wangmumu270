@@ -1,0 +1,417 @@
+*{
+	
+}
+
+html{
+	background-color: #FFFFFF;
+}
+
+/* 添加会员卡 */
+.container{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	padding-right: 12.5rem;
+	position: relative;
+	top: 15rem;
+	display: none;
+}
+
+.club-card{
+	width: 29.75rem;
+	height: 16.875rem;
+}
+
+.img-add{
+	width: 6rem;
+	height: auto;
+	margin-top: 5.3125rem;
+	margin-bottom: 1.875rem;
+}
+
+.text-add{
+	font-size: 1.375rem;
+	font-weight: 400;
+	color: #000000;
+}
+
+#noCardTip{
+	font-size: 1.375rem;
+	font-weight: 400;
+	color: #999999;
+	line-height: 3.75rem;
+}
+
+/* 按钮样式 */
+.backBox{
+	width: 100%;
+	height: 5rem;
+	margin: auto;
+	text-align: center;
+}
+
+.backBtn{
+	width: 14.0625rem;
+	height: 4.375rem;
+	position: relative;
+	top: 7.75rem;
+	font-size: 2rem;
+	font-weight: bold;
+	color: #FFFFFF;
+	letter-spacing: 0.5rem;
+}
+
+.backBtn:hover{
+	color: #FFFFFF;
+}
+
+.blue-background {
+    color: #fef4e9;
+    border: solid 0px #da7c0c;
+    background: #00C9FF;
+    background: -webkit-gradient(linear, left top, left bottom, from(#16e4ff), to(#00c4ff));
+    background: -moz-linear-gradient(top,  #16e4ff,  #00c4ff);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#16e4ff', endColorstr='#00c4ff');
+}
+
+/* 添加会员卡弹框 */
+.modal-dialog{
+	width: 32.6875rem;
+	height: 29.6875rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	top: 20%;
+	left: -4%;
+	box-shadow: 0.0625rem 0.3125rem 0.625rem 0rem #BBBBBB;
+	background-color: #FFFFFF;
+	border-radius: 0.3125rem;
+}
+
+.mask{
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: #FFFFFF;
+	opacity: 1;
+	filter: alpha(opacity = 40);
+	z-index: 10000;
+	display:none;
+}
+
+.dialog-head{
+	width: 32.6875rem;
+	height: 4.0625rem;
+	text-align: center;
+	position: absolute;
+	top: 0rem;
+	background: linear-gradient(0deg, #00c8ff, #00d9ff, #00eaff);
+	box-shadow: 0rem 0.0625rem 0.0625rem 0rem #00C9FF;
+	border-radius: 0.3125rem 0.3125rem 0rem 0rem;
+}
+
+.dialog-head p{
+	font-size: 2rem;
+	font-weight: bold;
+	color: #FFFFFF;
+	line-height: 3.75rem;
+}
+
+.dialog-title{
+	width: 32.5625rem;
+	text-align: left;
+	margin-left: 2.5rem;
+	margin-top: 1.8rem;
+	margin-bottom: 2.3rem;
+	font-size: 1.25rem;
+	font-weight: 400;
+	color: #262626;
+}
+
+.dialog-txt{
+	margin: 2.1875rem 0rem;
+	font-size: 1.25rem;
+	font-weight: 400;
+	color: #262626;
+}
+
+.dialog-middle{
+	display: flex;
+}
+
+.vip-icon,.guest-icon{
+	width: 7.625rem;
+	height: 6.5rem;
+}
+
+#vip-card,#guest-card{
+	width: 8.125rem;
+	height: auto;
+	text-align: center;
+}
+
+#guest-card{
+	margin-left: 7.75rem;
+}
+
+	/* outline表单输入时边框外发光线 */
+.btnBox{
+	width: 32.5625rem;
+	position: absolute;
+	bottom: 1.25rem;
+	display: flex;
+	justify-content: space-around;
+}
+
+.btnBox button,.add-btnBox button{
+	width: 12.5rem;
+	height: 4.0625rem;
+	font-size: 2rem;
+	font-weight: bold;
+	color: #FFFFFF;
+	letter-spacing: 0.5rem;
+	background: #00C9FF;
+	background: -webkit-gradient(linear, left top, left bottom, from(#16e4ff), to(#00c4ff));
+	background: -moz-linear-gradient(top,  #16e4ff,  #00c4ff);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#16e4ff', endColorstr='#00c4ff');
+}
+/* 鼠标悬停,鼠标访问过的状态,点击后鼠标移开保持鼠标点击时的状态 */
+.btnBox button:hover,.btnBox button:visited,.btnBox button:focus{
+	color: #FFFFFF;
+}
+.add-btnBox button:hover,.add-btnBox button:visited,.add-btnBox button:focus{
+	color: #FFFFFF;
+}
+/* 鼠标单击时 */
+.btnBox button:active,.add-btnBox button:active{
+	background: #00C9FF;
+	color: #FFFFFF;
+}
+
+#vip-details{
+	position: absolute;
+	top: 1.25rem;
+	left: 0;
+	right: 0;
+}
+
+.addVip{
+	width: 3.75rem;
+	height: auto;
+	position: absolute;
+	right: 1.25rem;
+	cursor: pointer;
+}
+
+#vip-details table{
+	width: 95.9375rem;
+	height: auto;
+	text-align: center;
+	margin: auto;
+	border: 0;
+}
+
+caption{
+	text-align: center;
+	font-weight: 400;
+	color: #262626;
+	line-height: 3.75rem;
+	margin-top: 2.25rem;
+}
+
+.deposit_width{
+	width: 18%;
+}
+
+.deposit_widths{
+	width: 15.6%;
+}
+
+.deposit_padding{
+	width: 16.8%;
+}
+
+/* 修改、删除字体样式 */
+.line-exit{
+	font-size: 1.25rem;
+	font-weight: 400;
+	/* line-height: 3.75rem; */
+	color: #00C9FF;
+}
+.line-delete{
+	font-size: 1.25rem;
+	font-weight: 400;
+	color: #FF0000;
+}
+
+/* 添加会员卡/散客卡弹窗样式 */
+
+/* .vip_mask,.guest_mask{
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: #FFFFFF;
+	opacity: 1;
+	filter: alpha(opacity = 40);
+	z-index: 10000;
+	display:none;
+} */
+
+.exit_vip_mask,.vip_mask,.guest_mask,.exit_guest_mask{
+	position: absolute;
+	top: -7%;
+	right: 0;
+	left: 5%;
+	bottom: 0;
+	/* background: #FFFFFF; */
+	opacity: 1;
+	filter: alpha(opacity = 40);
+	z-index: 10000;
+	display:none;
+}
+
+.add-modal-dialog{
+	width: 38.75rem;
+	height: auto;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	top: 15%;
+	left: 30%;
+	box-shadow: 0.0625rem 0.3125rem 0.625rem 0rem #BBBBBB;
+	background-color: #FFFFFF;
+	border-radius: 0.3125rem;
+}
+
+.add-dialog-middle{
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.add-dialog-middle ul{
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 0 1.25rem;
+	padding: 0;
+}
+
+.add-dialog-middle ul li{
+	display: flex;
+	flex-direction: column;
+	margin-left: 3.3rem;
+	margin-top: 0.625rem;
+}
+
+.right-position{
+	width: 15.9rem;
+}
+
+.right-position label{
+	margin-left: 3.55rem;
+}
+
+.leftMargin{
+	width: 18.5rem;
+}
+
+.leftMargin label{
+	margin-left: 4.75rem;
+}
+
+label{
+	font-size: 1.25rem;
+	font-family: Source Han Sans SC;
+	font-weight: 400;
+	color: #262626;
+}
+
+#vip_name,#guest_name,#exit_vip_name,#exit_guest_name{
+	width: 30.25rem;
+	height: 3.75rem;
+	margin-bottom: 0.625rem;
+}
+
+.vip_mask input[type="text"],.guest_mask input[type="text"],
+.exit_vip_mask input[type="text"],.exit_guest_mask input[type="text"]{
+	width: 10rem;
+	height: 3.75rem;
+	margin-right: 0.3125rem;
+}
+
+.popupBox{
+	width: 38.75rem;
+	height: 44.9375rem;
+	padding-bottom: 0.625rem;
+}
+
+.popupBoxs{
+	width: 38.75rem;
+	height: 37.9375rem;
+	padding-bottom: 0.625rem;
+	margin-top: 0.625rem;
+}
+
+.add-dialog-head{
+	width: 38.75rem;
+	height: 4.0625rem;
+	text-align: center;
+	position: absolute;
+	top: 0rem;
+	background: linear-gradient(0deg, #00c8ff, #00d9ff, #00eaff);
+	box-shadow: 0rem 0.0625rem 0.0625rem 0rem #00C9FF;
+	border-radius: 0.3125rem 0.3125rem 0rem 0rem;
+}
+
+.add-dialog-head p{
+	font-size: 2rem;
+	font-weight: bold;
+	color: #FFFFFF;
+	line-height: 3.75rem;
+}
+
+.add-btnBox{
+	width: 38.75rem;
+	position: absolute;
+	bottom: 1.25rem;
+	display: flex;
+	justify-content: space-around;
+}
+
+.guest-dialog-middle{
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	padding-top: 1.25rem;
+}
+
+.guest-dialog-middle ul{
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 0 1rem;
+	padding: 0;
+}
+
+.guest-dialog-middle ul>li{
+	margin-bottom: 0.625rem;
+}
+
+.guest-dialog-middle ul li{
+	display: flex;
+	flex-direction: column;
+	margin-left: 3.3rem;
+	margin-top: 0.625rem;
+}
+
+/* #guest_deposit{
+	margin-top: 0.9375rem;
+} */

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" href="../../css/publicStyle/bootstrap.css" />
+		<link rel="stylesheet" href="../../css/publicStyle/bootstrap-theme.css" />
+		<link rel="stylesheet" href="../../css/publicStyle/public.css" />
+		<link rel="stylesheet" href="../../css/homePage/addClubCard.css" />
+	</head>
+	<body>
+		<!-- 无会员卡信息时 展示页面 -->
+		<div class="container">
+			<img class="club-card" src="../../picture/images/club-card.png" />
+			<!-- <img class="img-add" onclick="" title="添加" alt="添加会员卡" src="../../picture/images/add.png" /> -->
+				<p class="text-add">添加会员卡</p>
+				<p id="noCardTip">提示：当前并会员卡信息，请添加会员卡</p>
+			<div class="backBox">
+				<button class="btn backBtn blue-background" onclick="backBtnFun()">返回</button>
+			</div>
+		</div>
+		<!-- 查询后台有会员卡或散客卡信息，则展示信息 -->
+		<div id="vip-details" class="table-responsive">
+			<img class="addVip" onclick="showSelect()" title="添加会员卡" alt="添加会员散客卡" src="../../picture/images/square-add.png" />
+			<table id="vip-table" class="table table-bordered">
+				<caption><h3>会员卡</h3></caption>
+				<tbody>
+					<tr class="vip-table-head active">
+						<td><input type="checkbox" id="vipAllChecked"/></td>
+						<td>序号</td>
+						<td>会员卡名称</td>
+						<td>会员卡金额(元)</td>
+						<td>有效时间(天)</td>
+						<td>可借数量(本)</td>
+						<td>丢失罚金倍数(倍)</td>
+						<td>收费标准(元/天)</td>
+						<td>超期收费标准(元/天)</td>
+						<td>操作</td>
+					</tr>
+				</tbody>
+			</table>
+			<table id="guest-table" class="table table-bordered">
+				<caption><h3>散客卡</h3></caption>
+				<tbody>
+					<tr class="guest-table-head active">
+						<td><input type="checkbox" id="guestAllChecked"/></td>
+						<td>序号</td>
+						<td class="deposit_widths">散客卡名称</td>
+						<td class="deposit_width">押金(元)</td>
+						<td class="deposit_widths">可借数量(本)</td>
+						<td class="deposit_padding">丢失罚金倍数(倍)</td>
+						<td class="deposit_widths">收费标准(元/天)</td>
+						<!-- <td>超期收费标准(元/天)</td> -->
+						<td>操作</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<!-- 选择添加会员散客卡弹框 -->
+		<div class="mask">
+			<div class="modal-dialog">
+				<div class="dialog-head"><p>添加会员卡</p></div>
+						<p class="dialog-title">请选择添加的卡片种类</p>
+				<div class="dialog-middle">
+					<div id="vip-card">
+						<img class="vip-icon" src="../../picture/images/vip-dark.png" />
+						<p class="dialog-txt">会员卡</p>
+					</div>
+					<div id="guest-card">
+						<img class="guest-icon" src="../../picture/images/disperse-guest-dark.png" />
+						<p class="dialog-txt">散客</p>
+					</div>
+				</div>
+				<div class="btnBox">
+					<button class="btn cancelBtn" type="button">取消</button>
+					<button class="btn submitSelect" type="submit" onclick="sureBtnFun()">确定</button>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 添加会员卡弹窗 -->
+		<div class="vip_mask">
+			<div class="popupBox add-modal-dialog">
+				<div class="add-dialog-head"><p>添加会员卡</p></div>
+				<div class="add-dialog-middle">
+					<ul>
+						<!-- <li>
+							<p>选择总店</p>
+							<select>
+								<option>亚博书店</option>
+								<option>惠通书店</option>
+							</select>
+						</li> -->
+						<li>
+							<label class="redStar" form="vip_name">会员卡名称</label>
+							<input id="vip_name" type="text" required="required"/>
+						</li>
+						<li>
+							<label class="redStar" form="vip_money">会员卡金额</label>
+							<label><input id="vip_money" type="text" required="required"/>元</label>
+						</li>
+						<li class="right-position">
+							<label class="redStar" form="vip_validTime">有效时间</label>
+							<label><input id="vip_validTime" type="text" required="required"/>天</label>
+						</li>
+						<li>
+							<label class="redStar" form="vip_borrowNum">可借数量</label>
+							<label><input id="vip_borrowNum" type="text" required="required"/>本</label>
+						</li>
+						<li class="right-position">
+							<label class="redStar" form="vip_borrowDays">可借天数</label>
+							<label><input id="vip_borrowDays" type="text" required="required"/>天</label>
+						</li>
+						<li>
+							<label class="redStar" form="vip_standard">超期收费标准</label>
+							<label><input id="vip_standard" type="text" required="required"/>元/天/本</label>
+						</li>
+						<li>
+							<label class="redStar" form="vip_multiple">丢失罚金倍数</label>
+							<label><input id="vip_multiple" type="text" required="required"/>倍</label>
+						</li>
+					</ul>
+				</div>
+				<div class="add-btnBox">
+					<button class="btn addVip-cancel" type="button" onclick="vipCancelFun()">取消</button>
+					<button class="btn addVip-submit" type="submit" onclick="vipSubmitFun()">确定</button>
+				</div>
+			</div>
+		</div>
+		<!-- 添加散客卡弹窗 -->
+		<div class="guest_mask">
+			<div class="popupBoxs add-modal-dialog">
+				<div class="add-dialog-head"><p>添加散客卡</p></div>
+				<div class="guest-dialog-middle">
+					<ul>
+						<li>
+							<label class="redStar" form="guest_name">散客卡名称</label>
+							<label><input id="guest_name" type="text" required="required"/></label>
+						</li>
+						<li>
+							<label class="redStar" form="guest_deposit">押金金额</label>
+							<label><input id="guest_deposit" type="text" required="required"/></label>
+						</li>
+						<li class="leftMargin">
+							<label form="guest_borrowNum">可借数量</label>
+							<label><input id="guest_borrowNum" type="text" />本</label>
+						</li>
+						<li>
+							<label form="guest_standard">收费标准</label>
+							<label><input id="guest_standard" type="text" />元/天/本</label>
+						</li>
+						<li>
+							<label form="guest_multiple">丢失罚金倍数</label>
+							<label><input id="guest_multiple" type="text" />倍</label>
+						</li>
+					</ul>
+				</div>
+				<div class="add-btnBox">
+					<button class="btn addGuest-cancel" type="button" onclick="guestCancelFun()">取消</button>
+					<button class="btn addGuest-submit" type="submit" onclick="guestSubmitFun()">确定</button>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 修改会员卡弹窗 -->
+		<div class="exit_vip_mask">
+			<div class="popupBox add-modal-dialog">
+				<div class="add-dialog-head"><p>修改会员卡</p></div>
+				<div class="add-dialog-middle">
+					<ul>
+						<li>
+							<label class="redStar" form="exit_vip_name">会员卡名称</label>
+							<input id="exit_vip_name" type="text" required="required"/>
+						</li>
+						<li>
+							<label class="redStar" form="exit_vip_money">会员卡金额</label>
+							<label><input id="exit_vip_money" type="text" required="required"/>元</label>
+						</li>
+						<li class="right-position">
+							<label class="redStar" form="exit_vip_validTime">有效时间</label>
+							<label><input id="exit_vip_validTime" type="text" required="required"/>天</label>
+						</li>
+						<li>
+							<label class="redStar" form="exit_vip_borrowNum">可借数量</label>
+							<label><input id="exit_vip_borrowNum" type="text" required="required"/>本</label>
+						</li>
+						<li class="right-position">
+							<label class="redStar" form="exit_vip_borrowDays">可借天数</label>
+							<label><input id="exit_vip_borrowDays" type="text" required="required"/>天</label>
+						</li>
+						<li>
+							<label class="redStar" form="exit_vip_standard">超期收费标准</label>
+							<label><input id="exit_vip_standard" type="text" required="required"/>元/天/本</label>
+						</li>
+						<li>
+							<label class="redStar" form="exit_vip_multiple">丢失罚金倍数</label>
+							<label><input id="exit_vip_multiple" type="text" required="required"/>倍</label>
+						</li>
+					</ul>
+				</div>
+				<div class="add-btnBox">
+					<button class="btn" type="button" onclick="cancelExitVip()">取消</button>
+					<button class="btn updateVipCard" type="submit" onclick="">确定</button>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 修改散客卡弹窗 -->
+		<div class="exit_guest_mask">
+			<div class="popupBoxs add-modal-dialog">
+				<div class="add-dialog-head"><p>修改散客卡</p></div>
+				<div class="guest-dialog-middle">
+					<ul>
+						<li>
+							<label class="redStar" form="exit_guest_name">散客卡名称</label>
+							<label><input id="exit_guest_name" type="text" required="required"/></label>
+						</li>
+						<li>
+							<label class="redStar" form="exit_guest_deposit">押金金额</label>
+							<label><input id="exit_guest_deposit" type="text" required="required"/></label>
+						</li>
+						<li class="leftMargin">
+							<label form="exit_guest_borrowNum">可借数量</label>
+							<label><input id="exit_guest_borrowNum" type="text" />本</label>
+						</li>
+						<li>
+							<label form="exit_guest_standard">收费标准</label>
+							<label><input id="exit_guest_standard" type="text" />元/天/本</label>
+						</li>
+						<li>
+							<label form="exit_guest_multiple">丢失罚金倍数</label>
+							<label><input id="exit_guest_multiple" type="text" />倍</label>
+						</li>
+					</ul>
+				</div>
+				<div class="add-btnBox">
+					<button class="btn" type="button" onclick="exitGuestCancel()">取消</button>
+					<button class="btn updateGuestCard" type="submit" onclick="">确定</button>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" charset="utf-8" src="../../js/publicEvent/jquery.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../../js/publicEvent/bootstrap.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../../js/publicEvent/bootstrap.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../../js/publicEvent/utils.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../js/homePage/addClubCard.js"></script>
+</html>

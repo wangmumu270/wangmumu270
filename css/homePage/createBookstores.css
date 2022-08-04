@@ -1,0 +1,265 @@
+* {
+	margin: 0;
+	padding: 0;
+	touch-action: pan-y;
+	font-family: "SourceHanSansSC-Normal";
+}
+
+html{
+	width: 100%;
+	height: 100%;
+	background-color: #FFFFFF;
+}
+
+/* 书店列表样式开始 */
+.group-list{
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	margin-top: 0rem ;
+	margin-left: 6.375rem;
+	margin-right: 9.375rem;
+	margin-bottom: 15.75rem;
+}
+
+ul li{
+	width: 29.125rem;
+	height: 26rem;
+	list-style-type: none;
+	box-shadow: 0.0625rem 0.3125rem 0.625rem 0rem #BBBBBB;
+	border-radius: 0.3125rem;
+	margin-top: 7.75rem;
+	margin-left: 6.75rem;
+	margin-bottom: 0rem;
+}
+
+.add-bookstore{
+	width: 2.875rem;
+	height: auto;
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	cursor: pointer;
+}
+
+.vip-setting{
+	width: 3.75rem;
+	height: auto;
+	position: absolute;
+	top: 1.5rem;
+	right: 6.85rem;
+}
+
+.editIcon,.deleteIcon{
+	width: 1.6875rem;
+	height: 2rem;
+}
+
+.storeHead{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #00C9FF;
+	font-weight: bold;
+	font-size: 2rem;
+	color: #FFFFFF;
+	border-radius: 0.3125rem 0.3125rem 0rem 0rem;
+}
+
+.storeHead p{
+	width: 70%;
+	height: auto;
+	padding-top: 0.8125rem;
+}
+
+ul li>img{
+	width: 16.875rem;
+	height: 14.3125rem;
+	position: relative;
+	top: 2.55rem;
+	left: 4.65rem;
+}
+/* 书店列表样式结束 */
+
+/* 添加书店 */
+.container{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	padding-right: 12.5rem;
+	position: relative;
+	top: 15rem;
+}
+
+.img-createStore{
+	width: 16.875rem;
+	height: 14.1875rem;
+}
+
+.img-add{
+	width: 5rem;
+	height: auto;
+	margin-top: 5.3125rem;
+	margin-bottom: 1.875rem;
+}
+
+.text-add{
+	font-size: 1.375rem;
+	font-weight: 400;
+	color: #000000;
+}
+
+#noBookstoreTip{
+	font-size: 1.375rem;
+	font-weight: 400;
+	color: #999999;
+	line-height: 3.75rem;
+}
+
+/* 按钮样式 */
+.backBox{
+	width: 100%;
+	height: 5rem;
+	margin: auto;
+	text-align: center;
+}
+
+.backBtn{
+	width: 14.0625rem;
+	height: 4.375rem;
+	position: relative;
+	top: 7.75rem;
+	font-size: 2rem;
+	font-weight: bold;
+	color: #FFFFFF;
+	letter-spacing: 0.5rem;
+}
+
+.backBtn02{
+	width: 14.0625rem;
+	height: 4.375rem;
+	position: relative;
+	/* top: 15.75rem; */
+	bottom: 3.125rem;
+	/* left: -4%; */
+	font-size: 2rem;
+	font-weight: bold;
+	color: #FFFFFF;
+	letter-spacing: 0.5rem;
+}
+
+.backBtn:hover,.backBtn02:hover{
+	color: #FFFFFF;
+}
+
+.blue-background {
+    color: #fef4e9;
+    border: solid 0px #da7c0c;
+    background: #00C9FF;
+    background: -webkit-gradient(linear, left top, left bottom, from(#16e4ff), to(#00c4ff));
+    background: -moz-linear-gradient(top,  #16e4ff,  #00c4ff);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#16e4ff', endColorstr='#00c4ff');
+}
+
+/* 创建书店弹框 || 用户输入书店的名称和地址 */
+.modal-dialog{
+	width: 32.5625rem;
+	height: 26.5625rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	top: 30%;
+	left: -4%;
+	box-shadow: 0.0625rem 0.3125rem 0.625rem 0rem #BBBBBB;
+	background-color: #FFFFFF;
+	border-radius: 0.3125rem;
+}
+
+.mask,.editMask{
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: #FFFFFF;
+	opacity: 1;
+	filter: alpha(opacity = 40);
+	z-index: 10000;
+	display:none;
+}
+
+form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+form label{
+	font-size: 1.25rem;
+	color: #262626;
+	font-weight: 400;
+}
+
+.dialog-head{
+	width: 32.5625rem;
+	height: 4.0625rem;
+	text-align: center;
+	position: absolute;
+	top: 0rem;
+	background: linear-gradient(0deg, #00c8ff, #00d9ff, #00eaff);
+	box-shadow: 0rem 0.0625rem 0.0625rem 0rem #00C9FF;
+	border-radius: 0.3125rem 0.3125rem 0rem 0rem;
+}
+
+.dialog-head p{
+	font-size: 2rem;
+	font-weight: bold;
+	color: #FFFFFF;
+	line-height: 3.75rem;
+}
+
+input{
+	width: 25rem;
+	height: 3.125rem;
+	margin-top: 0.5625rem;
+	margin-bottom: 1.875rem;
+	outline: none;
+}
+
+.bookstore-img{
+	cursor: pointer;
+}
+
+	/* outline表单输入时边框外发光线 */
+.btnBox{
+	width: 32.5625rem;
+	position: absolute;
+	bottom: 1.25rem;
+	display: flex;
+	justify-content: space-around;
+}
+
+.btnBox button{
+	width: 12.5rem;
+	height: 4.0625rem;
+	font-size: 2rem;
+	font-weight: bold;
+	color: #FFFFFF;
+	letter-spacing: 0.5rem;
+	background: #00C9FF;
+	background: -webkit-gradient(linear, left top, left bottom, from(#16e4ff), to(#00c4ff));
+	background: -moz-linear-gradient(top,  #16e4ff,  #00c4ff);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#16e4ff', endColorstr='#00c4ff');
+}
+/* 鼠标悬停,鼠标访问过的状态,点击后鼠标移开保持鼠标点击时的状态 */
+.btnBox button:hover,.btnBox button:visited,.btnBox button:focus{
+	color: #FFFFFF;
+}
+/* 鼠标单击时 */
+.btnBox button:active{
+	background: #00C9FF;
+	color: #FFFFFF;
+}

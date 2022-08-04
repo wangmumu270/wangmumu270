@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<title>个人中心</title>
+		<link rel="stylesheet" href="../../css/publicStyle/bootstrap.css" />
+		<link rel="stylesheet" href="../../css/publicStyle/bootstrap-theme.css" />
+		<link rel="stylesheet" href="../../css/publicStyle/public.css" />
+		<link rel="stylesheet" href="../../css/homePage/personalCenter.css" />
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row topBox">
+				<!-- 左侧导航栏 -->
+			  <div id="navigationBox">
+				  <div>
+					  <img class="headIcon" src="../../picture/images/cowIcon.png" />
+					  <p class="headIconName">管理员何超</p>
+					  <div class="navList">
+						  <ul>
+							  <!-- <li class="navHome">
+								  <img src="../../picture/images/homeIcon.png" />
+								  <p>首页</p>
+							  </li> -->
+							  <li class="navStroe">
+								  <img src="../../picture/images/storeManage.png" />
+								  <p>首页</p>
+							  </li>
+							  <li class="navSearch">
+								  <img src="../../picture/images/searchIcon.png" />
+								  <p>搜索图书</p>
+							  </li>
+							  <li class="navOperate">
+								  <img src="../../picture/images/clerkIcon.png" />
+								  <!-- <a class="delUnderline" href="#clerkOperation"></a> -->
+								  <p>店员操作</p>
+							  </li>
+							  <li class="navPersonal">
+								  <img src="../../picture/images/personalIcon.png" />
+								  <p>个人中心</p>
+							  </li>
+						  </ul>
+					  </div>
+				  </div>
+			  </div>
+			  <!-- 主要内容信息 -->
+			  <div id="contentMainBox">
+				  <!-- 切换以及退出账号按钮 -->
+				  <div class="contentHeader">
+					  <p class="navigationTip"></p>
+					  <img class="switchIcon" onclick="switchIconFun()" title="切换账号" alt="切换账号" src="../../picture/images/switchIcon.png" />
+					  <img class="exitIcon" onclick="exitIconFun()" title="退出账号" alt="退出账号" src="../../picture/images/exitIcon.png" />
+				  </div>
+				  <!--导航栏块 个人中心 || 用户信息 -->
+				  <div id="personalCenter" class="contentMessage">
+					  <div>
+						  <input type="file" class="file" name="file" style="display: none;" />
+						  <img id="userIcon" src="../../picture/images/userIcon.png" />
+						  <p id="personName">何超</p><!-- <span class="userVal"> style="display: none;" disabled="disabled"</span> -->
+						  <form class="detailsBar">
+							  <label><span class="align-right redStar">姓名</span><input id="namePer" disabled="disabled" type="text" value="何超"/></label>
+							  <label><span class="align-right redStar">性别</span><input id="sexPer" disabled="disabled" type="text" value="女"/></label>
+							  <label><span class="align-right">出生日期</span><input id="datetime" id="birthPer" disabled="disabled" type="date" value="1994-09-12"/></label>
+							  <label><span class="align-right">年龄</span><input id="agePer" disabled="disabled" type="text" value="27"/></label>
+							  <label><span class="align-right">身份证号码</span><input id="IdCardPer" disabled="disabled" type="text" value="311925199409120127"/></label>
+							  <label><span class="align-right">现住地址</span><input id="addressPer" disabled="disabled" type="text" value="北京市房山区长阳镇首开熙悦汇13号楼906"/></label>
+							  <label><span class="align-right redStar">联系电话</span><input id="phonePer" disabled="disabled" type="text" value="13432720906"/></label>
+							  <label><span class="align-right">电子邮件</span><input id="emailPer" disabled="disabled" type="text" value="2834534436@qq.com"/></label>
+							  <label><span class="align-right redStar">账号</span><input id="accountPer" disabled="disabled" type="text" value="何超"/></label>
+							  <label><span class="align-right redStar">密码</span><input id="pwdPer" disabled="disabled" type="text" value="chaochao1994"/></label>
+							  <label><span class="align-right redStar">管理的书店</span><input id="managePer" disabled="disabled" type="text" value="长阳店"/></label>
+						  </form>
+					  </div>
+					  <button class="btn modifyBtn blue-background" type="reset" onclick="modifyBtnFun()">修改</button>
+				  </div>
+				  
+				  <!--导航栏块 书店管理 -->
+				  <iframe id="bookstore-management" name="Management" src="bookstoreManagement.html" frameborder="0"></iframe>
+				  <!-- <div id="bookstoreManagement" class="contentMessage">
+					  <div class="manageBox">
+						  <div id="createBookstore" class="createBookstore left-align" onclick="createBookstoreFun()">
+							  <img src="../../picture/images/createStore.png" />
+							  <p>创建书店</p>
+						  </div>
+						  <div id="seeBookstore" class="seeBookstore left-align">
+							  <img src="../../picture/images/seeStore.png" />
+							  <p>查看书店</p>
+						  </div>
+					  </div>
+				  </div> -->
+				  
+				  <!--导航栏块 店员操作 -->
+				  <div id="clerkOperation" class="contentMessage">
+					  <div class="clerkBox">
+						  <ul class="row operateBox">
+							  <li class="col-xs-6 col-md-3">
+								  <img class="littleBook" src="../../picture/images/entrys.png" />
+								  <p>图书录入</p>
+							  </li>
+							  <li class="col-xs-6 col-md-3">
+								  <img class="bigBook" src="../../picture/images/borrow.png"/>
+								  <p>图书借阅</p>
+							  </li>
+							  <li class="col-xs-6 col-md-3">
+								  <img class="bigBook" src="../../picture/images/return.png"/>
+								  <p>图书归还</p>
+							  </li>
+							  <li class="col-xs-6 col-md-3">
+								  <img class="littleBook" src="../../picture/images/shelves.png"/>
+								  <p>图书下架</p>
+							  </li>
+							  <li class="col-xs-6 col-md-4">
+								  <img class="bigBook" src="../../picture/images/sell.png"/>
+								  <p>卖出图书</p>
+							  </li>
+						</ul>
+						<ul class="row operateBox">
+							  <li class="col-xs-6 col-md-4">
+								  <img class="bigBook" src="../../picture/images/identity.png"/>
+								  <p>识别图书</p>
+							  </li>
+							  <li class="col-xs-6 col-md-4 hides"></li>
+							  <li class="col-xs-6 col-md-4 hides"></li>
+							  <li class="col-xs-6 col-md-4 hides"></li>
+							  <li class="col-xs-6 col-md-4 hides"></li>
+						  </ul>
+					  </div>
+				  </div>
+				  
+			  </div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" charset="utf-8" src="../../js/publicEvent/jquery.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../../js/publicEvent/bootstrap.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../../js/publicEvent/bootstrap.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../../js/publicEvent/utils.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../js/homePage/personalCenter.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../js/homePage/createBookstores.js"></script>
+</html>
